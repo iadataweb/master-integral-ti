@@ -4,6 +4,10 @@ Es un sistema web para administrar los recursos y las operaciones de TI (Tecnolo
 
 ![Vista del sistema](app/Assets/img/cover/001.png)
 
+## Descripción
+
+Este sistema web es de código abierto que permite administrar activos, registrar tareas, atender incidencias y dar seguimiento a movimientos y mantenimientos. Incluye roles y permisos para controlar el acceso a los módulos y las acciones de cada usuario.
+
 ## Funciones principales
 
 - **Panel de control:** consulta indicadores y genera reportes PDF.
