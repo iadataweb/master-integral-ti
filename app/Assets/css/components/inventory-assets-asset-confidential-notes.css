@@ -1,0 +1,32 @@
+#ModalAssetConfidentialNotes .asset-section,
+#ModalAssetConfidentialNotes .asset-panel {
+    background: var(--bs-body-bg);
+    border: 1px solid rgba(120, 144, 180, .25);
+    border-radius: 12px;
+}
+#ModalAssetConfidentialNotes .asset-section { padding: 12px; }
+#ModalAssetConfidentialNotes .asset-section-title,
+#ModalAssetConfidentialNotes .asset-panel-title {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--bs-heading-color);
+}
+#ModalAssetConfidentialNotes .asset-panel { overflow: hidden; }
+#ModalAssetConfidentialNotes .asset-panel-title {
+    padding: 11px 12px;
+    margin: 0;
+    background: rgba(47, 104, 226, .08);
+    border-bottom: 1px solid rgba(120, 144, 180, .22);
+}
+#ModalAssetConfidentialNotes .asset-panel-body { padding: 12px; }
+#ModalAssetConfidentialNotes .confidential-note-muted {
+    color: var(--bs-secondary-color);
+    font-size: .86rem;
+}
+
+#ModalAssetConfidentialNotes .confidential-note-content {
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+    line-height: 1.65;
+    color: var(--ui-text);
+}

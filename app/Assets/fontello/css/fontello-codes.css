@@ -1,0 +1,4 @@
+
+.icon-print:before { content: '\e800'; } /* '' */
+.icon-file-pdf:before { content: '\f1c1'; } /* '' */
+.icon-file-excel:before { content: '\f1c3'; } /* '' */

@@ -1,0 +1,43 @@
+.floor-plan-preview {
+  position: relative;
+  min-height: 520px;
+  border: 1px solid rgba(120, 144, 180, .28);
+  border-radius: 14px;
+  overflow: hidden;
+  background: var(--bs-body-bg);
+}
+.floor-plan-preview iframe {
+  width: 100%;
+  height: 620px;
+  border: 0;
+  display: block;
+}
+.floor-plan-meta {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+.floor-plan-card {
+  border: 1px solid rgba(120, 144, 180, .25);
+  border-radius: 12px;
+  padding: 12px;
+  background: var(--bs-body-bg);
+}
+.floor-plan-label {
+  display: block;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .4px;
+  text-transform: uppercase;
+  color: var(--bs-secondary-color);
+  margin-bottom: 4px;
+}
+.floor-plan-value {
+  color: var(--bs-body-color);
+  font-weight: 600;
+  word-break: break-word;
+}
+@media (max-width: 991.98px) {
+  .floor-plan-meta { grid-template-columns: 1fr; }
+  .floor-plan-preview iframe { height: 460px; }
+}

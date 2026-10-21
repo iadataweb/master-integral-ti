@@ -1,0 +1,174 @@
+.plan-location-view {
+  position: relative;
+  min-height: 220px;
+  border: 1px solid rgba(120, 144, 180, .28);
+  border-radius: 18px;
+  overflow: hidden;
+  background: var(--bs-body-bg);
+}
+.plan-location-view .plan-location-image {
+  width: 100%;
+  height: auto;
+  border: 0;
+  display: block;
+}
+.plan-location-point {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  z-index: 6;
+  width: 20px;
+  height: 20px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+}
+.plan-location-line {
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  width: var(--line-length, 78px);
+  height: 2px;
+  border-radius: 999px;
+  background: rgba(37, 99, 235, .58);
+  transform: rotate(var(--line-angle, -25deg));
+  transform-origin: left center;
+  pointer-events: none;
+  z-index: 1;
+}
+.plan-location-marker {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 20px;
+  min-width: 20px;
+  height: 20px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  background: var(--ui-primary);
+  border-radius: 999px;
+  border: 2px solid #fff;
+  box-shadow: 0 5px 14px rgba(37, 99, 235, .28);
+  font-size: 12px;
+  z-index: 3;
+}
+.plan-location-label {
+  position: absolute;
+  left: var(--label-x, 92px);
+  top: var(--label-y, -44px);
+  transform: translate(-50%, -50%);
+  z-index: 4;
+  background: var(--bs-body-bg);
+  color: var(--bs-body-color);
+  border: 1px solid rgba(120, 144, 180, .28);
+  border-radius: 999px;
+  padding: 6px 12px;
+  font-weight: 700;
+  white-space: nowrap;
+  box-shadow: 0 12px 28px rgba(15, 23, 42, .12);
+}
+html.theme-dark .plan-location-line {
+  background: rgba(56, 189, 248, .72);
+}
+.plan-summary-section {
+  overflow: hidden;
+  border: 1px solid var(--ui-border);
+  border-radius: var(--ui-radius-lg);
+  background: var(--ui-surface-soft);
+  box-shadow: var(--ui-shadow-sm, 0 12px 28px rgba(15, 23, 42, .08));
+}
+.plan-summary-section .asset-section-title {
+  margin: 0;
+  padding: 0.75rem 0.9rem;
+  border-bottom: 1px solid var(--ui-border);
+  background: var(--ui-primary-soft);
+  color: var(--ui-text);
+  font-size: 0.88rem;
+  font-weight: 800;
+}
+.plan-summary-section .asset-meta-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.65rem;
+  padding: 0.85rem;
+}
+.plan-summary-section .asset-meta-card {
+  min-height: 74px;
+  padding: 0.75rem;
+  border: 1px solid var(--ui-border);
+  border-radius: var(--ui-radius-lg);
+  background: var(--ui-surface-soft);
+}
+.plan-summary-section .asset-meta-label {
+  display: block;
+  margin-bottom: 0.35rem;
+  color: var(--ui-text-muted);
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.35px;
+  text-transform: uppercase;
+}
+.plan-summary-section .asset-meta-value {
+  color: var(--ui-text);
+  font-weight: 650;
+  line-height: 1.45;
+  word-break: break-word;
+}
+#ModalPlanLocationDetail .modal-body {
+  padding: 1rem;
+}
+#ModalPlanLocationDetail .plan-detail-section {
+  overflow: hidden;
+  border: 1px solid var(--ui-border);
+  border-radius: var(--ui-radius-lg);
+  background: var(--ui-surface-soft);
+}
+#ModalPlanLocationDetail .plan-detail-section-title {
+  margin: 0;
+  padding: 0.75rem 0.9rem;
+  border-bottom: 1px solid var(--ui-border);
+  background: var(--ui-primary-soft);
+  color: var(--ui-text);
+  font-size: 0.88rem;
+  font-weight: 800;
+}
+#ModalPlanLocationDetail .plan-detail-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.65rem;
+  padding: 0.85rem;
+}
+#ModalPlanLocationDetail .plan-detail-card {
+  min-height: 74px;
+  padding: 0.75rem;
+  border: 1px solid var(--ui-border);
+  border-radius: var(--ui-radius-lg);
+  background: var(--ui-surface-soft);
+}
+#ModalPlanLocationDetail .plan-detail-label {
+  display: block;
+  margin-bottom: 0.35rem;
+  color: var(--ui-text-muted);
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.35px;
+  text-transform: uppercase;
+}
+#ModalPlanLocationDetail .plan-detail-value {
+  color: var(--ui-text);
+  font-weight: 650;
+  line-height: 1.45;
+  word-break: break-word;
+}
+@media (max-width: 991.98px) {
+  .plan-summary-section .asset-meta-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .plan-location-view { min-height: 220px; }
+  .plan-location-view .plan-location-image { min-height: 0; }
+  .plan-location-label { white-space: normal; max-width: 220px; text-align: center; }
+  #ModalPlanLocationDetail .plan-detail-grid { grid-template-columns: 1fr; }
+}
+@media (max-width: 575.98px) {
+  .plan-summary-section .asset-meta-grid { grid-template-columns: 1fr; }
+}

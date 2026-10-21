@@ -1,0 +1,102 @@
+.asset-location-map {
+  position: relative;
+  min-height: 220px;
+  border: 1px solid var(--ui-border);
+  border-radius: var(--ui-radius-sm);
+  overflow: hidden;
+  background: var(--ui-surface);
+}
+.asset-location-map .asset-location-plan-image {
+  width: 100%;
+  height: auto;
+  border: 0;
+  display: block;
+  pointer-events: none;
+}
+.asset-location-marker {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  z-index: 6;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  overflow: visible;
+}
+.asset-location-marker-line {
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  width: var(--line-length, 36px);
+  height: 2px;
+  border-radius: 999px;
+  background: rgba(37, 99, 235, .72);
+  transform: rotate(var(--line-angle, 0deg));
+  transform-origin: left center;
+  z-index: 1;
+  pointer-events: none;
+}
+.asset-location-marker-point {
+  width: 20px;
+  min-width: 20px;
+  height: 20px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  background: var(--ui-primary);
+  border: 2px solid #fff;
+  border-radius: 999px;
+  font-size: 12px;
+  box-shadow: 0 5px 14px rgba(37, 99, 235, .28);
+  z-index: 3;
+}
+.asset-location-marker-label {
+  position: absolute;
+  left: var(--label-x, 0px);
+  top: var(--label-y, 36px);
+  transform: translate(-50%, -50%);
+  max-width: 180px;
+  padding: 6px 12px;
+  border: 1px solid var(--ui-border);
+  border-radius: 999px;
+  background: var(--ui-surface);
+  color: var(--ui-text);
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1.2;
+  white-space: nowrap;
+  box-shadow: 0 12px 28px rgba(15, 23, 42, .12);
+  z-index: 4;
+}
+.asset-location-empty {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 24px;
+  color: var(--ui-text-muted);
+  background: rgba(148, 163, 184, .08);
+  z-index: 3;
+}
+html[data-theme="dark"] .asset-location-marker {
+  color: #082f49;
+}
+html[data-theme="dark"] .asset-location-marker-point {
+  background: #38bdf8;
+  color: #082f49;
+  border-color: rgba(8, 47, 73, .7);
+}
+html[data-theme="dark"] .asset-location-marker-line {
+  background: rgba(56, 189, 248, .72);
+}
+@media (max-width: 991.98px) {
+  .asset-location-map { min-height: 220px; }
+  .asset-location-map .asset-location-plan-image { min-height: 0; }
+  .asset-location-marker-label { max-width: 130px; white-space: normal; text-align: center; font-size: 11px; }
+}

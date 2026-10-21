@@ -1,0 +1,39 @@
+.incident-report-page {
+  --report-surface: var(--ui-surface, #ffffff);
+  --report-soft: var(--ui-surface-soft);
+  --report-border: var(--ui-border, rgba(148, 163, 184, .28));
+  --report-text: var(--ui-text);
+  --report-muted: var(--ui-text-muted);
+  --report-radius: var(--ui-radius-lg);
+}
+.incident-report-card {
+  border: 1px solid var(--report-border);
+  background: var(--report-surface);
+  border-radius: var(--report-radius);
+  box-shadow: var(--ui-shadow-soft);
+}
+.incident-report-card {
+  padding: 1.2rem;
+}
+.incident-report-card .form-label {
+  font-size: .78rem;
+  font-weight: 750;
+  color: var(--report-muted);
+  letter-spacing: .04em;
+  text-transform: uppercase;
+}
+.incident-report-actions {
+  display: flex;
+  gap: .65rem;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+}
+@media (max-width: 767.98px) {
+  .incident-report-actions {
+    justify-content: flex-start;
+  }
+  .incident-report-actions .btn {
+    width: 100%;
+    justify-content: center;
+  }
+}

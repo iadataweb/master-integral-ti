@@ -1,0 +1,105 @@
+#ModalSeeHistory .modal-content {
+    border: 0;
+    border-radius: 14px;
+    overflow: hidden;
+}
+
+#ModalSeeHistory .modal-header {
+    border-bottom: 1px solid #e6edf5;
+    background: linear-gradient(135deg, #f8fbff 0%, #eef5ff 100%);
+}
+
+#ModalSeeHistory .modal-title {
+    font-weight: 700;
+    color: #1f2d3d;
+    letter-spacing: .2px;
+}
+
+#ModalSeeHistory .history-layout {
+    display: grid;
+    gap: 14px;
+}
+
+#ModalSeeHistory .history-meta-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+}
+
+#ModalSeeHistory .history-meta-card {
+    background: #f7faff;
+    border: 1px solid #dce8f7;
+    border-radius: 10px;
+    padding: 10px 12px;
+}
+
+#ModalSeeHistory .history-meta-label {
+    display: block;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: .4px;
+    text-transform: uppercase;
+    color: #6b7f99;
+    margin-bottom: 3px;
+}
+
+#ModalSeeHistory .history-meta-value {
+    color: #1f2d3d;
+    font-weight: 600;
+    word-break: break-word;
+}
+
+#ModalSeeHistory .history-panel {
+    border: 1px solid #dce8f7;
+    border-radius: 10px;
+    background: #fff;
+    overflow: hidden;
+}
+
+#ModalSeeHistory .history-panel-title {
+    margin: 0;
+    padding: 10px 12px;
+    font-size: 14px;
+    font-weight: 700;
+    color: #294869;
+    background: #f4f8fe;
+    border-bottom: 1px solid #e3edf9;
+}
+
+#ModalSeeHistory .history-panel-body {
+    padding: 12px;
+}
+
+#ModalSeeHistory #cell-action-history-maintenance-preventive ul {
+    margin: 0;
+    padding-left: 18px;
+    line-height: 1.5;
+}
+
+#ModalSeeHistory #cell-action-history-maintenance-preventive li {
+    margin-bottom: 4px;
+}
+
+#ModalSeeHistory .history-table thead th {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: .4px;
+    color: #60748b;
+    background: #f8fbff;
+    border-bottom: 2px solid #d9e5f3;
+}
+
+#ModalSeeHistory .history-table tbody td {
+    vertical-align: middle;
+}
+
+#ModalSeeHistory .history-table .btn {
+    border-radius: 18px;
+    padding: .32rem .8rem;
+}
+
+@media (max-width: 991.98px) {
+    #ModalSeeHistory .history-meta-grid {
+        grid-template-columns: 1fr;
+    }
+}

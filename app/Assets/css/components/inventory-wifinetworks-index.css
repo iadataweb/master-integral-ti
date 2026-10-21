@@ -1,0 +1,31 @@
+.credential-layout { display: grid; gap: 14px; }
+.credential-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+.credential-card, .credential-section {
+  background: var(--bs-body-bg);
+  border: 1px solid rgba(120, 144, 180, .25);
+  border-radius: 12px;
+  padding: 12px;
+}
+.credential-label {
+  display: block;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .4px;
+  text-transform: uppercase;
+  color: var(--bs-secondary-color);
+  margin-bottom: 4px;
+}
+.credential-value { color: var(--bs-body-color); font-weight: 600; word-break: break-word; }
+.credential-section-title {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--bs-heading-color);
+  margin-bottom: 12px;
+}
+.asset-selected-panel {
+  border: 1px dashed rgba(49, 105, 235, .35);
+  background: rgba(49, 105, 235, .06);
+  border-radius: 12px;
+  padding: 12px;
+}
+@media (max-width: 991.98px) { .credential-grid { grid-template-columns: 1fr; } }

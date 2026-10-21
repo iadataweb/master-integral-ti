@@ -1,0 +1,109 @@
+:is(#ModalSee, .ui-record-detail) .modal-content {
+    border: 0;
+    border-radius: 14px;
+    overflow: hidden;
+}
+
+:is(#ModalSee, .ui-record-detail) .modal-header {
+    border-bottom: 1px solid #e6edf5;
+    background: linear-gradient(135deg, #f8fbff 0%, #eef5ff 100%);
+}
+
+:is(#ModalSee, .ui-record-detail) .modal-title {
+    font-weight: 700;
+    color: #1f2d3d;
+    letter-spacing: .2px;
+}
+
+:is(#ModalSee, .ui-record-detail) .asset-layout {
+    display: grid;
+    gap: 14px;
+}
+
+:is(#ModalSee, .ui-record-detail) .asset-meta-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+}
+
+:is(#ModalSee, .ui-record-detail) .asset-meta-card {
+    background: #f7faff;
+    border: 1px solid #dce8f7;
+    border-radius: 10px;
+    padding: 10px 12px;
+}
+
+:is(#ModalSee, .ui-record-detail) .asset-meta-label {
+    display: block;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: .4px;
+    text-transform: uppercase;
+    color: #6b7f99;
+    margin-bottom: 3px;
+}
+
+:is(#ModalSee, .ui-record-detail) .asset-meta-value {
+    color: #1f2d3d;
+    font-weight: 600;
+    word-break: break-word;
+}
+
+:is(#ModalSee, .ui-record-detail) .asset-panel {
+    border: 1px solid #dce8f7;
+    border-radius: 10px;
+    background: #fff;
+    overflow: hidden;
+}
+
+:is(#ModalSee, .ui-record-detail) .asset-panel-title {
+    margin: 0;
+    padding: 10px 12px;
+    font-size: 14px;
+    font-weight: 700;
+    color: #294869;
+    background: #f4f8fe;
+    border-bottom: 1px solid #e3edf9;
+}
+
+:is(#ModalSee, .ui-record-detail) .asset-panel-body {
+    padding: 12px;
+}
+
+:is(#ModalSee, .ui-record-detail) #cell-descriptions-asset ul,
+:is(#ModalSee, .ui-record-detail) #cell-observations-asset ul {
+    margin: 0;
+    padding-left: 18px;
+    line-height: 1.5;
+}
+
+:is(#ModalSee, .ui-record-detail) #cell-descriptions-asset li,
+:is(#ModalSee, .ui-record-detail) #cell-observations-asset li {
+    margin-bottom: 4px;
+}
+
+:is(#ModalSee, .ui-record-detail) .asset-table thead th {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: .4px;
+    color: #60748b;
+    background: #f8fbff;
+    border-bottom: 2px solid #d9e5f3;
+}
+
+:is(#ModalSee, .ui-record-detail) .asset-table tbody td {
+    vertical-align: middle;
+}
+
+:is(#ModalSee, .ui-record-detail) .asset-table .btn {
+    border-radius: 18px;
+    padding: .32rem .8rem;
+}
+
+@media (max-width: 991.98px) {
+    :is(#ModalSee, .ui-record-detail) .asset-meta-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.ui-record-detail .asset-detail-text { white-space: pre-wrap; overflow-wrap: anywhere; }

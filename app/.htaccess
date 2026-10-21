@@ -1,0 +1,8 @@
+Options -Indexes
+RewriteEngine On
+RewriteRule ^(?:Config|Core|Models|Helpers|Views|Layouts|Libraries|Database)(?:/|$) - [F,L,NC]
+RewriteRule (^|/)\. - [F,L]
+RewriteRule ^Assets/uploads/.*\.(?:php[0-9]?|phtml|pht|phar|cgi|pl|py|sh|shtml|html?|svg|js)(?:\.|$) - [F,L,NC]
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^(.*)$ index.php?url=$1 [QSA,L]

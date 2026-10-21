@@ -1,0 +1,23 @@
+#ModalAssetEquipmentUser .asset-section,
+#ModalAssetEquipmentUser .asset-panel {
+    background: var(--bs-body-bg);
+    border: 1px solid rgba(120, 144, 180, .25);
+    border-radius: 12px;
+}
+#ModalAssetEquipmentUser .asset-section { padding: 12px; }
+#ModalAssetEquipmentUser .asset-section-title,
+#ModalAssetEquipmentUser .asset-panel-title {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--bs-heading-color);
+}
+#ModalAssetEquipmentUser .asset-panel { overflow: hidden; }
+#ModalAssetEquipmentUser .asset-panel-title {
+    padding: 11px 12px;
+    margin: 0;
+    background: rgba(47, 104, 226, .08);
+    border-bottom: 1px solid rgba(120, 144, 180, .22);
+}
+#ModalAssetEquipmentUser .asset-panel-body { padding: 12px; }
+#ModalAssetEquipmentUser .equipment-user-muted { color: var(--ui-text-muted); font-size: .86rem; }
+

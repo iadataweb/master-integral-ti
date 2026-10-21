@@ -1,0 +1,50 @@
+services:
+  web:
+    build: .
+    container_name: app_web_master_integral_ti
+    ports:
+      - "${WEB_PORT:-8080}:80"
+    volumes:
+      - ./app:/var/www/html
+    environment:
+      WEB_PORT: ${WEB_PORT:-8080}
+      APP_URL: ${APP_URL:-}
+      DB_HOST: ${DB_HOST:?Define DB_HOST en .env}
+      DB_NAME: ${DB_NAME:?Define DB_NAME en .env}
+      DB_USER: ${DB_USER:?Define DB_USER en .env}
+      DB_PASSWORD: ${DB_PASSWORD:?Define DB_PASSWORD en .env}
+      DB_CHARSET: ${DB_CHARSET:?Define DB_CHARSET en .env}
+    depends_on:
+      - db
+    command: sh -lc "mkdir -p /var/www/html/Assets/uploads && chown -R www-data:www-data /var/www/html/Assets/uploads && chmod -R 775 /var/www/html/Assets/uploads && apache2-foreground"
+    restart: unless-stopped
+
+  db:
+    image: mysql:8.0
+    container_name: app_mysql_master_ti
+    environment:
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD:?Define MYSQL_ROOT_PASSWORD en .env}
+      MYSQL_DATABASE: ${DB_NAME:?Define DB_NAME en .env}
+      MYSQL_USER: ${DB_USER:?Define DB_USER en .env}
+      MYSQL_PASSWORD: ${DB_PASSWORD:?Define DB_PASSWORD en .env}
+      TZ: America/Lima
+    command: --default-authentication-plugin=mysql_native_password
+    ports:
+      - "${MYSQL_PORT:-3308}:3306"
+    volumes:
+      - db_data:/var/lib/mysql
+    restart: unless-stopped
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    container_name: app_phpmyadmin_master_ti
+    depends_on:
+      - db
+    ports:
+      - "${PHPMYADMIN_PORT:-8081}:80"
+    environment:
+      PMA_HOST: db
+    restart: unless-stopped
+
+volumes:
+  db_data:

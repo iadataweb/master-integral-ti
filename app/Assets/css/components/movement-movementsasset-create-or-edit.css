@@ -1,0 +1,77 @@
+.movement-plan-picker {
+    position: relative;
+    min-height: 220px;
+    border: 1px solid rgba(120, 144, 180, .28);
+    border-radius: 14px;
+    overflow: hidden;
+    background: var(--bs-body-bg);
+}
+.movement-plan-picker.has-plan {
+    min-height: 0;
+}
+.movement-plan-picker .movement-plan-image {
+    width: 100%;
+    height: auto;
+    border: 0;
+    display: block;
+    pointer-events: none;
+}
+.movement-plan-overlay {
+    position: absolute;
+    inset: 0;
+    cursor: crosshair;
+    z-index: 2;
+}
+.movement-plan-marker {
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    transform: translate(-50%, -50%);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    background: var(--ui-primary);
+    border-radius: 999px;
+    border: 2px solid #fff;
+    box-shadow: 0 2px 8px rgba(37, 99, 235, .32);
+    pointer-events: none;
+    font-size: 0;
+}
+.movement-plan-marker i {
+    display: none;
+}
+.movement-plan-empty {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+    color: var(--bs-secondary-color);
+    background: rgba(148, 163, 184, .08);
+    z-index: 3;
+}
+html.theme-dark .movement-plan-marker {
+    background: #38bdf8;
+    color: #082f49;
+}
+@media (max-width: 991.98px) {
+    .movement-plan-picker { min-height: 220px; }
+
+}
+
+#ModalCRUD .modal-dialog { width: calc(100% - 2rem); max-width: 1000px; margin-inline: auto; }
+.movement-steps { display: flex; gap: .5rem; list-style: none; padding: 0; margin: 0 0 1rem; flex-wrap: wrap; }
+.movement-steps li { flex: 1; padding: .55rem .7rem; border-bottom: 2px solid var(--ui-border); color: var(--ui-text-muted); text-align: center; font-size: .85rem; }
+.movement-steps li.active { color: var(--ui-primary); border-color: var(--ui-primary); font-weight: 600; }
+.movement-origin-summary { padding: .9rem; border: 1px solid var(--ui-border); border-radius: var(--ui-radius-md); background: var(--ui-surface-soft); margin-bottom: 1rem; }
+.movement-optional-plan { margin-top: 1rem; border: 1px solid var(--ui-border); border-radius: var(--ui-radius-md); padding: .8rem; }
+.movement-optional-plan summary { cursor: pointer; color: var(--ui-primary); font-weight: 600; }
+.movement-review { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: .75rem; }
+.movement-review div { background: var(--ui-surface-soft); border: 1px solid var(--ui-border); padding: .8rem; border-radius: var(--ui-radius-md); }
+.movement-review span { display: block; color: var(--ui-text-muted); font-size: .8rem; margin-bottom: .25rem; }
+.movement-review strong { display: block; overflow-wrap: anywhere; font-size: .95rem; }
+#formMovementAsset .js-remove-existing { display: none !important; }
+@media (max-width: 575.98px) { .movement-review { grid-template-columns: 1fr; } #ModalCRUD .modal-dialog { width: calc(100% - 1rem); } }
