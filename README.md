@@ -8,6 +8,10 @@ Es un sistema web para administrar los recursos y las operaciones de TI (Tecnolo
 
 Este sistema web es de código abierto que permite administrar activos, registrar tareas, atender incidencias y dar seguimiento a movimientos y mantenimientos. Incluye roles y permisos para controlar el acceso a los módulos y las acciones de cada usuario.
 
+## Desarrollo
+
+El proyecto se desarrolló durante años sin inteligencia artificial. Posteriormente, se incorporó IA como herramienta de apoyo para completar el desarrollo del sistema.
+
 ## Funciones principales
 
 - **Panel de control:** consulta indicadores y genera reportes PDF.
@@ -74,10 +78,6 @@ Para detener el entorno conservando los datos: `docker compose down`.
 ## Despliegue
 
 Para publicar el sistema en un servidor, define su dirección en `APP_URL`, habilita HTTPS y restringe el acceso a MySQL, phpMyAdmin y los archivos adjuntos.
-
-## Desarrollo
-
-El proyecto se desarrolló durante años sin inteligencia artificial. Posteriormente, se incorporó IA como herramienta de apoyo para completar el desarrollo del sistema.
 
 ## Colaboración
 
