@@ -1,6 +1,17 @@
 <?php 
 	class EmployeesModel extends Mysql
 	{
+		private $int_id_area;
+		private $int_id_position;
+		private $int_id_professional_title;
+		private $int_preferred_name_employee;
+		private $str_cell_phone_employee;
+		private $str_dni_employee;
+		private $str_email_employee;
+		private $str_first_name_employee;
+		private $str_maternal_last_name_employee;
+		private $str_middle_name_employee;
+		private $str_paternal_last_name_employee;
 		private $int_id_employee;
 		private $str_name_employee;
 		private $int_status_active_employee;

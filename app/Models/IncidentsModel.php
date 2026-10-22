@@ -1,6 +1,12 @@
 <?php 
 	class IncidentsModel extends Mysql
 	{
+		private $int_id_asset;
+		private $int_id_space;
+		private $int_id_type_incident;
+		private $str_date_incident;
+		private $str_diagnostic_incident;
+		private $str_solution_incident;
 		private $int_id_user;
 		private $int_id_incident;
 		private $int_id_attachment_incident;

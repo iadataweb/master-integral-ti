@@ -297,7 +297,6 @@ class FloorPlans extends Controllers
         }
         imagesavealpha($image, true);
         imagepng($image, $imagePath, 6);
-        imagedestroy($image);
     }
 
     private function requireCommand(string $command): string

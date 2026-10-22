@@ -1,6 +1,18 @@
 <?php 
 	class AssetsModel extends Mysql
 	{
+        private $int_id_attachment_asset;
+        private $int_id_brand;
+        private $int_id_category_asset;
+        private $int_id_condition_asset;
+        private $int_id_type_asset;
+        private $str_acquisition_date_asset;
+        private $str_code_inventory_asset;
+        private $str_descriptions_asset;
+        private $str_entry_date_asset;
+        private $str_model_asset;
+        private $str_observations_asset;
+        private $str_serial_number_asset;
 		private $int_id_asset;
 		private $str_name_asset;
 		private $int_status_active_asset;

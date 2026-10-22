@@ -1,6 +1,11 @@
 <?php 
-	class CompaniesModel extends Mysql
-	{
+	class CompaniesModel extends Mysql {
+		private $str_cell_phone_company;
+		private $str_description_company;
+		private $str_email_company;
+		private $str_observation_company;
+		private $str_ruc_company;
+		private $str_telephone_company;
 		private $int_id_company;
 		private $str_name_company;
 		private $int_status_active_company;

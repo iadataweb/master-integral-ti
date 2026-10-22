@@ -1,12 +1,13 @@
 {
     "require": {
+        "php": "~8.5.0",
         "chillerlan/php-qrcode": "^5.0",
         "tecnickcom/tcpdf": "^6.10",
         "fpdf/fpdf": "^1.86"
     },
     "config": {
         "platform": {
-            "php": "7.4.0"
+            "php": "8.5.0"
         }
     }
 }

@@ -27,7 +27,7 @@ El proyecto se desarrolló durante años sin inteligencia artificial. Posteriorm
 
 ## Tecnologías
 
-PHP con MVC propio, MySQL 8, JavaScript, jQuery, Bootstrap, DataTables, TCPDF, FPDF y Docker Compose.
+PHP 8.5 con MVC propio, MySQL 8, JavaScript, jQuery, Bootstrap, DataTables, TCPDF, FPDF y Docker Compose.
 
 ## Instalación local
 

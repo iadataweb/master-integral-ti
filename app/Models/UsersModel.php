@@ -1,6 +1,9 @@
 <?php 
 	class UsersModel extends Mysql
 	{
+		private $int_id_employee;
+		private $status_deleted_user;
+		private $str_name_user;
 		private $int_id_user;
 		private $str_first_names_user;
 		private $str_last_names_user;

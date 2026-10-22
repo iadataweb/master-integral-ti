@@ -2,6 +2,7 @@
 require_once __DIR__ . "/../Core/SuperAdministratorPolicy.php"; 
 	class RolesModel extends Mysql
 	{
+    	private $int_status_deleted_role;
 		private $int_id_role;
 		private $str_name_role;
 		private $str_description_role;

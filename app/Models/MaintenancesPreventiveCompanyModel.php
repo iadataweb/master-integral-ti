@@ -1,6 +1,8 @@
 <?php 
 	class MaintenancesPreventiveCompanyModel extends Mysql
 	{
+    	private $int_id_maintenance_preventive;
+
 		public function __construct()
 		{
 			parent::__construct();

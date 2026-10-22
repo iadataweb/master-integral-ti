@@ -1,6 +1,31 @@
 <?php 
 class MaintenancesPreventiveModel extends Mysql
 {
+		private $int_history_maintenance_preventive;
+		private $int_id_asset;
+		private $int_id_attachment_maintenance_preventive;
+		private $int_id_company;
+		private $int_id_frequency_maintenance;
+		private $int_id_frequency_maintenance_maintenance_preventive;
+		private $int_id_history_maintenance_preventive;
+		private $int_id_maintenance_preventive;
+		private $int_id_maintenance_preventive_company;
+		private $int_id_status_maintenance;
+		private $int_id_type_responsible_maintenance;
+		private $int_id_type_responsible_maintenance_maintenance_preventive;
+		private $int_old_asset_id;
+		private $int_status_maintenance_asset;
+		private $src_date_performed_history_maintenance_preventive;
+		private $src_date_scheduled_maintenance_preventive;
+		private $src_new_date_scheduled_maintenance_preventive;
+		private $src_time_performed_history_maintenance_preventive;
+		private $str_action_history_maintenance_preventivetive;
+		private $str_date_next_maintenance_preventive;
+		private $str_date_scheduled_maintenance_preventive;
+		private $str_description_maintenance_preventive;
+		private $str_new_date_next_maintenance_preventive;
+		private $str_observation_history_maintenance_preventive;
+		private $str_observation_maintenance_preventive;
 		private static $schemaInitialized = false;
 		private $int_id_movement_asset;
 		private $str_name_movement_asset;

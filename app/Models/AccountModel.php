@@ -6,7 +6,6 @@ class AccountModel extends Mysql
     private $str_last_names_user;
     private $str_email_user;
     private $int_cell_phone_user;
-
     private $str_current_password;
     private $str_hashed_password;
 

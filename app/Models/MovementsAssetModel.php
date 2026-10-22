@@ -2,6 +2,11 @@
 require_once __DIR__ . '/MovementRules.php';
 	class MovementsAssetModel extends Mysql
 	{
+        private $int_id_asset;
+        private $int_id_attachment_movement_asset;
+        private $int_status_deleted_attachment_movement_asset;
+        private $str_name_attachment_movement_asset;
+        private $str_route_attachment_movement_asset;
 		private $int_id_movement_asset;
 		private $str_name_movement_asset;
 		private $int_status_active_movement_asset;
